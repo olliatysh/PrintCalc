@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintCalc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" method="get" id="form">
+            <h1>PrintCalc</h1>
+            <label class="checkForModel">
+                <span>Моделлинг</span>
+
+                <div class="checkbox-wrapper-7">
+                    <input class="tgl tgl-ios" id="cb2-7" type="checkbox" name="needs-model" />
+                    <label class="tgl-btn" for="cb2-7">
+                </div>
+            </label>
+            <label for="">
+                Моделлинг
+                <select name="model-time" class="model-time" disabled>
+                    <option value="1">1 час</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </label>
+            <label>
+                Материал
+                <select name="material" id="" class="material" onChange="nameRecieve(this);">
+                    <option value="none" selected disabled>Выберите материал</option>
+                    <option value="1.9">ABS - 1990руб/кг</option>
+                    <option value="1.9">PETG - 1990руб/кг</option>
+                    <option value="2.4">PLA - 2390руб/кг</option>
+                    <option value="5.5">TPU - 5500руб/кг</option>
+                    <option value="5.9">B-Flex - 5980руб/кг</option>
+                </select>
+            </label>
+            <label for="">
+                Расход
+                <input type="number" name="consumption" id="" placeholder="(граммы)">
+            </label>
+            <label for="">
+                Время печати
+                <input type="number" name="time-print" id="" placeholder="(часы)">
+            </label>
+            <label for="">
+                Время постобработки
+                <input type="number" name="time-post" id="" placeholder="(часы)">
+            </label>
+            <div class="btns">
+                <input type="reset" value="Сброс" class="btn reset">
+                <input type="submit" value="Расчет" class="btn submit">
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <div id="my_modal" class="modal">
+        <div class="modal_content">
+            <div class="modal-header">
+                <span class="close_modal_window">×</span>
+                <h3>Предварительный расчет</h3>
+            </div>
+            
+            <div class="price">
+                <span>выбранный сеттинг составит</span>
+                <p class="result-field">00000</p>
+                <span>рублей</span>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
